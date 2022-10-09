@@ -9,7 +9,7 @@ interface ISignUp{
   public boolean addStudent (int stuType);
   // 解析命令行输入的参数（格式），如文档描述
 public static IParams parse() throws Exception{
-	.....
+	....
 };
 }
 interface IParams{
