@@ -21,6 +21,7 @@ interface IParams{
 }
 
 class kiderManagement implements IParams{
+//初始化小中大班名额，获取入学序列
 	Integer big;
 	Integer medium;
 	Integer small;
@@ -39,6 +40,9 @@ class kiderManagement implements IParams{
 	}
 }
 public class SchoolSystem implements ISignUp{
+//打印输出结果，检查是否有 stuType对应的班级名额
+// 如果没有剩余名额，请返回 false ，否则学生将报名进入该班级并返回 true
+}
 	Integer big;
 	Integer medium;
 	Integer small;
@@ -48,11 +52,25 @@ public class SchoolSystem implements ISignUp{
 		this.small=small;
 	}
 	public void print() {
-    	  System.out.println();
+		System.out.println(getPlanSignUp);
+		System.out.println(addStudent(1));
+        System.out.println(addStudent(2));
+        System.out.println(addStudent(3));
       }
      public boolean addStudent (int stuType) {
-    	  if(stuType=big) {
-    		  if()
+    	  if(stuType==1) {
+    		  if(big-1>0) {
+    			  big=big-1;
+    			  return true;
+    		  }else
+    			  return false;
+    	  }
+    	  if(stuType==2) {
+    		  if(medium-1>0) {
+    			  medium=medium-1;
+    			  return true;
+    		  }else
+    			  return false;
     	  }
       }
      String[] parse(String input) {
